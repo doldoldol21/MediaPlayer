@@ -1,0 +1,201 @@
+BorderPane, BorderPane:focused{
+	-fx-background-color: -fx-my-menu-color;
+}  
+.stackPane, .stackPane:focused{
+	-fx-background-color: black;
+}
+
+/* 변수같이 선언하여 사용할 수 있음 */
+* {
+    -fx-my-menu-color: #1B2540;                  
+    -fx-my-menu-color-highlighted: #364B80;     
+    -fx-my-menu-font-color: white;             
+    -fx-my-menu-font-color-highlighted: white; 
+}
+
+/* MENU BAR + Top-level MENU BUTTONS */
+/*** The menu bar itself ***/    
+.menu-bar {
+    -fx-background-color: -fx-my-menu-color;
+}
+
+/*** Top-level menu itself (not selected / hovered) ***/
+.menu-bar > .container > .menu-button {
+    -fx-background-color: -fx-my-menu-color;
+}
+
+/*** Top-level menu's label (not selected / hovered) ***/
+.menu-bar > .container > .menu-button > .label {
+    -fx-text-fill: -fx-my-menu-font-color;
+}
+
+/*** Top-level menu's label (disabled) ***/
+.menu-bar > .container > .menu-button > .label:disabled {
+    -fx-opacity: 1.0;
+}
+
+/*** Top-level menu itself (selected / hovered) ***/
+.menu-bar > .container > .menu-button:hover,
+.menu-bar > .container > .menu-button:focused,
+.menu-bar > .container > .menu-button:showing {
+    -fx-background-color: -fx-my-menu-color-highlighted;
+}
+
+/*** Top-level menu's label (selected / hovered) ***/
+.menu-bar > .container > .menu-button:hover > .label,
+.menu-bar > .container > .menu-button:focused > .label,
+.menu-bar > .container > .menu-button:showing > .label {
+    -fx-text-fill: -fx-my-menu-font-color-highlighted;
+}
+
+/* MENU ITEM (children of a MENU BUTTON) */
+/*** The item itself (not hovered / focused) ***/    
+.menu-item {
+    -fx-background-color: -fx-my-menu-color; 
+}
+
+/*** The item's label (not hovered / focused) ***/   
+.menu-item .label {
+    -fx-text-fill: -fx-my-menu-font-color;
+}
+
+/*** The item's label (disabled) ***/   
+.menu-item .label:disabled {
+    -fx-opacity: 1.0;
+}    
+
+/*** The item itself (hovered / focused) ***/    
+.menu-item:focused, .menu-item:hovered {
+    -fx-background-color: -fx-my-menu-color-highlighted; 
+}
+
+/*** The item's label (hovered / focused) ***/  
+.menu-item:focused .label, .menu-item:hovered .label {
+    -fx-text-fill: -fx-my-menu-font-color-highlighted;
+}
+
+/* CONTEXT MENU */
+/*** The context menu that contains a menu's menu items ***/  
+.context-menu {
+    -fx-background-color: -fx-my-menu-color; 
+}
+#mainLabel{
+	-fx-text-fill: lightgray;
+}
+#subLabel{
+	-fx-text-fill: lightgray;
+}
+#timeNow{
+	-fx-text-fill: white;
+}
+#timeTotal{
+	-fx-text-fill: white;
+}
+#slider .thumb{
+	-fx-padding: 8;
+	-fx-border-color: #1B2540;
+	-fx-border-radius: 10;
+}
+#volume .thumb{
+	-fx-padding: 8;
+	-fx-border-color: #1B2540;
+	-fx-border-radius: 10;
+}
+#volume .track{
+	-fx-pref-height: 7;
+	-fx-background-color: rgb(204,230,255);
+	-fx-border-color: gray ;
+	-fx-border-insets: 1;
+	-fx-background-insets: 2;
+}
+#slider .track{
+	-fx-pref-height: 9;
+	-fx-background-color: rgb(204,230,255);
+	-fx-border-color: gray;
+	-fx-border-insets: 2;
+	-fx-background-insets: 2;
+}
+#btnPlay{
+	-fx-background-image: url("icon/play.png");
+	-fx-background-size: 30px;
+	-fx-background-color: rgba(0,0,0,0.0);
+	 
+}
+#btnPlay:pressed{
+	-fx-background-image: url("icon/play_p.png");
+	-fx-background-size: 30px;
+	-fx-background-color: rgba(0,0,0,0.0);
+	 
+}
+#btnPause{
+	 -fx-background-image: url("icon/pause.png");
+	-fx-background-size: 30px;
+	-fx-background-color: rgba(0,0,0,0.0);
+}
+#btnPause:pressed{
+	 -fx-background-image: url("icon/pause_p.png");
+	-fx-background-size: 30px;
+	-fx-background-color: rgba(0,0,0,0.0);
+	 
+}
+#btnStop{
+	 -fx-background-image: url("icon/stop.png");
+	-fx-background-size: 30px;
+	-fx-background-color: rgba(0,0,0,0.0);
+	 
+}
+#btnStop:pressed{
+	 -fx-background-image: url("icon/stop_p.png");
+	-fx-background-size: 30px;
+	-fx-background-color: rgba(0,0,0,0.0);
+}
+#btnRandom{
+	 -fx-background-image: url("icon/random.png");
+	-fx-background-size: 30px;
+	-fx-background-color: rgba(0,0,0,0.0);
+}
+#btnRandom2{
+	 -fx-background-image: url("icon/random_p.png");
+	-fx-background-size: 30px;
+	-fx-background-color: rgba(0,0,0,0.0);
+}
+#btnRepeat{
+	 -fx-background-image: url("icon/repeat.png");
+	-fx-background-size: 30px;
+	-fx-background-color: rgba(0,0,0,0.0);
+}
+#btnRepeat:pressed{
+	 -fx-background-image: url("icon/repeat_p.png");
+	-fx-background-size: 30px;
+	-fx-background-color: rgba(0,0,0,0.0);
+}
+#btnRepeat2{
+	 -fx-background-image: url("icon/repeat2.png");
+	-fx-background-size: 30px;
+	-fx-background-color: rgba(0,0,0,0.0);
+}
+#btnRepeat2:pressed{
+	 -fx-background-image: url("icon/repeat2_p.png");
+	-fx-background-size: 30px;
+	-fx-background-color: rgba(0,0,0,0.0);
+}
+#btnPre{
+	 -fx-background-image: url("icon/pre.png");
+	-fx-background-size: 30px;
+	-fx-background-color: rgba(0,0,0,0.0);
+}
+#btnPre:pressed{
+	 -fx-background-image: url("icon/pre_p.png");
+	-fx-background-size: 30px;
+	-fx-background-color: rgba(0,0,0,0.0);
+}
+#btnNext{
+	 -fx-background-image: url("icon/next.png");
+	-fx-background-size: 30px;
+	-fx-background-color: rgba(0,0,0,0.0);
+}
+#btnNext:pressed{
+	 -fx-background-image: url("icon/next_p.png");
+	-fx-background-size: 30px;
+	-fx-background-color: rgba(0,0,0,0.0);
+}

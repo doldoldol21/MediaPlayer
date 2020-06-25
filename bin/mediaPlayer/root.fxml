@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.media.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.media.*?>
+<?import javafx.scene.input.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="borderPane" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mediaPlayer.RootController">
+	<!-- 탑 -->
+  <top>
+  	<MenuBar>
+         <menus>
+            <Menu text="미디어" >
+              <items>
+                <MenuItem fx:id="menuItemOpen" text="파일 열기">
+                	<accelerator>
+                		<KeyCodeCombination alt="UP" code="O" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                	</accelerator>
+                </MenuItem>
+                <MenuItem fx:id="menuItemMultiOpen" text="파일 여러개 열기">
+                	<accelerator>
+                		<KeyCodeCombination alt="UP" code="O" control="DOWN" meta="UP" shift="DOWN" shortcut="UP" />
+                	</accelerator>
+                </MenuItem>
+                  <SeparatorMenuItem />
+                  <MenuItem fx:id="menuItemExit" text="종료">
+                  	<accelerator>
+                		<KeyCodeCombination alt="UP" code="Q" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                	</accelerator>
+                  </MenuItem>
+              </items>
+            </Menu>
+            <Menu text="보기" >
+               <items>
+                  <MenuItem fx:id="menuItemPlaylist" text="재생 목록">
+                  	<accelerator>
+                		<KeyCodeCombination alt="UP" code="L" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                	</accelerator>
+                  </MenuItem>
+                  <RadioMenuItem fx:id="menuItemRatio" selected="false" text="비율 유지" />
+               </items>
+            </Menu>
+         </menus></MenuBar>		
+  </top>
+  	<!-- 바텀 -->
+  <bottom>
+     <VBox alignment="CENTER" BorderPane.alignment="CENTER">
+        <children>
+           <HBox alignment="CENTER" fillHeight="false" prefHeight="0.0" prefWidth="0.0">
+              <children>
+                 <Label fx:id="timeNow" text="00:00" HBox.hgrow="ALWAYS">
+                    <HBox.margin>
+                       <Insets left="6.0" />
+                    </HBox.margin>
+                 </Label>
+                 <Slider fx:id="slider" blockIncrement="5.0" HBox.hgrow="ALWAYS">
+                    <padding>
+                       <Insets topRightBottomLeft="3.0" />
+                    </padding>
+                 </Slider>
+                 <Label fx:id="timeTotal" text="00:00" HBox.hgrow="ALWAYS">
+                    <padding>
+                       <Insets right="6.0" />
+                    </padding>
+                 </Label>
+              </children>
+           </HBox>
+           <HBox alignment="CENTER" spacing="10.0" VBox.vgrow="ALWAYS">
+              <children>
+                 <Button id="btnPre" fx:id="btnPrevious" prefHeight="30.0" prefWidth="30.0" />
+                 <Button id="btnPlay" fx:id="btnPlay" prefHeight="30.0" prefWidth="30.0" />
+                 <Button id="btnNext" fx:id="btnNext" prefHeight="30.0" prefWidth="30.0" />
+               <Button id="btnStop" fx:id="btnStop" prefHeight="30.0" prefWidth="30.0" />
+                 <Button id="btnRepeat" fx:id="btnRepeat" prefHeight="30.0" prefWidth="30.0" />
+                 <Button id="btnRandom" fx:id="btnRandom" prefHeight="30.0" prefWidth="30.0" />
+                 <HBox alignment="CENTER_LEFT" fillHeight="false" prefWidth="100.0" HBox.hgrow="ALWAYS" />
+                 <Slider fx:id="volume" prefWidth="90.0" HBox.hgrow="NEVER" />
+              </children>
+              <padding>
+                 <Insets bottom="3.0" left="5.0" right="5.0" />
+              </padding>
+           </HBox>
+        </children>
+     </VBox>
+  </bottom>
+  <!-- 센터 -->
+   <center>
+     <StackPane styleClass="stackPane" BorderPane.alignment="CENTER">
+        <children>
+          	<Label id="mainLabel" text="Media Player">
+          		<font>
+          			<Font size="25" />
+          		</font>
+          	</Label>
+           <MediaView fx:id="mediaView" preserveRatio="false" />
+            
+            <VBox alignment="TOP_RIGHT">
+               <children>
+                  <Label id="subLabel" fx:id="labelPopup">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets right="30.0" top="30.0" />
+               </padding>
+            </VBox>
+        </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+     </StackPane>
+   </center>
+</BorderPane>

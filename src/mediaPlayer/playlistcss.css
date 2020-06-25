@@ -1,0 +1,67 @@
+VBox{
+	-fx-background-color: black;
+}
+.table-view, .table-view:focused{
+	-fx-background-color: #1B2540;
+}
+.table-view .column-header,
+.table-view .column-header .filler,
+.table-view .column-header-background .filler {
+    -fx-background-color: black;
+}
+.table-view .table-cell{
+    -fx-text-fill: white;
+}
+.table-row-cell{
+	-fx-text-fill: white;
+	-fx-background-color: #1B2540;
+}
+.table-row-cell:selected {
+    -fx-text-fill: white;
+    -fx-background-color: #364B80;
+}
+
+.label{
+	-fx-text-fill: white;
+}
+#btnUp{
+	-fx-graphic: url("icon/up.png");
+	-fx-padding: 0;
+	-fx-background-color: white;
+	-fx-background-color: rgba(0,0,0,0.0);
+}
+#btnUp:pressed{
+	-fx-graphic: url("icon/up_p.png");
+	-fx-padding: 0;
+	-fx-background-color: rgba(0,0,0,0.0);
+}
+#btnDown{
+	-fx-graphic: url("icon/down.png");
+	-fx-padding: 0;
+	-fx-background-color: rgba(0,0,0,0.0);
+}
+#btnDown:pressed{
+	-fx-graphic: url("icon/down_p.png");
+	-fx-padding: 0;
+	-fx-background-color: rgba(0,0,0,0.0);
+}
+#btnAdd{
+	-fx-graphic: url("icon/add.png");
+	-fx-padding: 0;
+	-fx-background-color: rgba(0,0,0,0.0);
+}
+#btnAdd:pressed{
+	-fx-graphic: url("icon/add_p.png");
+	-fx-padding: 0;
+	-fx-background-color: rgba(0,0,0,0.0);
+}
+#btnDel{
+	-fx-graphic: url("icon/del.png");
+	-fx-padding: 0;
+	-fx-background-color: rgba(0,0,0,0.0);
+}
+#btnDel:pressed{
+	-fx-graphic: url("icon/del_p.png");
+	-fx-padding: 0;
+	-fx-background-color: rgba(0,0,0,0.0);
+}
